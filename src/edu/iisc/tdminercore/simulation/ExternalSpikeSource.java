@@ -170,9 +170,7 @@ public class ExternalSpikeSource {
     
     public static void main(String[] args)
     {
-        ExternalSpikeSource es = new ExternalSpikeSource("D:/Debprakash/" +
-                "neural-code.cs.vt.edu/branches/GMiner-COSYNE-08/TDMinerCore/" +
-                "ext-spike-input.txt");
+        ExternalSpikeSource es = new ExternalSpikeSource("ext-spike-input.txt");
         
         double clock = 0.0;
         double deltaT = 0.001;

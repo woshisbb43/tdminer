@@ -6,35 +6,20 @@
 
 package edu.iisc.tdminer.gui;
 
-import edu.iisc.tdminer.data.StateInfo;
-import edu.iisc.tdminer.model.ThreadedProgressManager;
-import edu.iisc.tdminer.util.AlgoEntry;
-import edu.iisc.tdminer.util.Algorithms;
-import edu.iisc.tdminer.util.Constants;
-
-import edu.iisc.tdminercore.counter.AbstractEpisodeCounter;
-import edu.iisc.tdminercore.data.EventFactor;
-import edu.iisc.tdminercore.data.Episode;
-import edu.iisc.tdminercore.data.EpisodeSet;
-import edu.iisc.tdminercore.data.IEpisode;
-import edu.iisc.tdminercore.data.IEvent;
-import edu.iisc.tdminercore.data.IEventDataStream;
-import edu.iisc.tdminercore.miner.GenericMiner;
-import edu.iisc.tdminercore.util.Crosscorrelogram;
-import edu.iisc.tdminercore.util.EventStreamWriter;
-import edu.iisc.tdminercore.util.IObserver;
-import edu.iisc.tdminercore.data.EpisodeInstanceSet;
-
 import java.awt.BorderLayout;
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.prefs.Preferences;
 
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
@@ -49,13 +34,26 @@ import javax.swing.UIManager;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import edu.iisc.tdminer.data.StateInfo;
+import edu.iisc.tdminer.model.ThreadedProgressManager;
+import edu.iisc.tdminer.util.AlgoEntry;
+import edu.iisc.tdminer.util.Algorithms;
+import edu.iisc.tdminer.util.Constants;
 import edu.iisc.tdminer.util.MatlabEngine;
 import edu.iisc.tdminer.util.PrintUtilities;
+import edu.iisc.tdminercore.counter.AbstractEpisodeCounter;
+import edu.iisc.tdminercore.data.Episode;
+import edu.iisc.tdminercore.data.EpisodeInstanceSet;
+import edu.iisc.tdminercore.data.EpisodeSet;
+import edu.iisc.tdminercore.data.EventFactor;
+import edu.iisc.tdminercore.data.IEpisode;
+import edu.iisc.tdminercore.data.IEvent;
+import edu.iisc.tdminercore.data.IEventDataStream;
+import edu.iisc.tdminercore.miner.GenericMiner;
 import edu.iisc.tdminercore.miner.SessionInfo;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.util.prefs.Preferences;
+import edu.iisc.tdminercore.util.Crosscorrelogram;
+import edu.iisc.tdminercore.util.EventStreamWriter;
+import edu.iisc.tdminercore.util.IObserver;
 
 /**
  * This is a singleton object.
@@ -156,12 +154,11 @@ public class TDMinerInterface extends javax.swing.JFrame
         });
         
         //Display the window.
-        //setTitle("GMiner");
         Toolkit t = Toolkit.getDefaultToolkit();
         int wHeight = (int)t.getScreenSize().getHeight();
         int wWidth = (int)t.getScreenSize().getWidth();
-        int height = 95  * (wHeight / 100);
-        int width = 8 * (wWidth/10);
+        int height = 75  * (wHeight / 100);
+        int width = 75 * (wWidth/100);
         setSize(width, height);
         //pack();
         height = getSize().height;
@@ -1033,7 +1030,7 @@ public class TDMinerInterface extends javax.swing.JFrame
     
     private void jMenuItemAboutActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItemAboutActionPerformed
     {//GEN-HEADEREND:event_jMenuItemAboutActionPerformed
-        new AboutWindow("GMiner", this);
+        new AboutWindow("TDMiner", this);
     }//GEN-LAST:event_jMenuItemAboutActionPerformed
         
     private void jMenuHelpActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuHelpActionPerformed

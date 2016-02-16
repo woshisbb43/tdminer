@@ -132,7 +132,7 @@ public class EventSeqLoaderPanel extends javax.swing.JPanel implements ITaskPane
                     }
                     
                     EventSeqLoaderPanel.this.repaint();
-                    frame.setTitle("GMiner - [" + seqName + "]");
+                    frame.setTitle("TDMiner - [" + seqName + "]");
                 }
             }
         });
@@ -161,7 +161,7 @@ public class EventSeqLoaderPanel extends javax.swing.JPanel implements ITaskPane
         HistogramUtil.changeDataUsingJTable(histPanel, model.getData(), model.getEventTypes(), "Plot of event types vs frequency");
         stateInfo.getSession().setEpisodes(null);
         jTextFieldFileName.setText("Simulation data loaded successfully");
-        frame.setTitle("GMiner - [Simulated Event Sequence]");
+        frame.setTitle("TDMiner - [Simulated Event Sequence]");
     }
     
     public void setJLabelStatus(JLabel jLabelStatus) {

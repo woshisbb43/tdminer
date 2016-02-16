@@ -29,7 +29,7 @@ class SimpleMiner {
 
     public static void mine(String[] args) throws IOException
     {
-        System.out.println("Running GMiner in batch mode");
+        System.out.println("Running TDMiner in batch mode");
         String paramFile = args[1];
         String inputFile = args[2];
         String outputFile = args[3];
@@ -84,9 +84,9 @@ class SimpleMiner {
     public static void main(String[] args) throws Exception
     {
         String[] cmd = {"-batch",
-            "D:/gminer-batch/ivl.txt",
-            "D:/gminer-batch/event-seq.csv",
-            "D:/gminer-batch/episodes.txt" };
+            "D:/tdminer-batch/ivl.txt",
+            "D:/tdminer-batch/event-seq.csv",
+            "D:/tdminer-batch/episodes.txt" };
         mine(cmd);
     }
 }

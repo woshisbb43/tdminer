@@ -135,7 +135,7 @@ public class ProgressManager extends AbstractObserver {
         
         this.cancelled = false;
         
-        UIManager.put("ProgressMonitor.progressText", "GMiner progress monitor");
+        UIManager.put("ProgressMonitor.progressText", "TDMiner progress monitor");
         int min = 0;
         int max = 100;
         

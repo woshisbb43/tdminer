@@ -29,7 +29,7 @@ public class AboutWindow extends JDialog
     /** Creates a new instance of SplashWindow3 */
     public AboutWindow(String filename, Frame f)
     {
-	super(f, "GMiner About", true);
+	super(f, "TDMiner About", true);
 	AboutPanel about = new AboutPanel();
 	about.getJButtonOk().addActionListener(new ActionListener()
 	{
