@@ -6,7 +6,8 @@ Implementation of Frequent serial and parallel episode mining algorithms with te
 - Clone/Fork from Github
 - Build using maven
 ```
-mvn assembly:single
+# this way of build project will meet no error
+mvn clean compile assembly:single
 ```
 Jar file will be placed in target folder: TDMiner-1.0-jar-with-dependencies.jar 
 
